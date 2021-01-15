@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+
+</head>
+<body>
+    <form style="margin: 0 auto; 
+    width:350px;font-size: 22px;" class="mt-5">
+        <fieldset>
+          <legend style="text-align: center;">Iniciar sesión</legend>
+          <hr>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Correo Electrónico</label>
+            <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Ingrese email">
+            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email con terceros.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input type="password" class="form-control" id="passInput" placeholder="Contraseña" >
+          </div>
+          </fieldset>
+
+          <button type="button" class="btn btn-success btn-lg btn-block" id="btnIniciar" onclick="Ingresar()">Iniciar sesión</button>
+      </form>
+      <script>
+
+
+
+          function Ingresar(){
+            const emailInput = document.getElementById("emailInput").value
+            const passInput = document.getElementById("passInput").value
+            
+            if(emailInput == "saul@hotmail.com" && passInput == "donas"){
+                window.location = "success.html"
+                event.preventDefault();
+            }else{
+              alert("datos incorrectos")
+            } 
+          }
+
+      </script>
+
+
+
+</body>
+</html>
